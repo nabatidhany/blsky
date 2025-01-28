@@ -12,7 +12,7 @@ export default function Index({id}: {id: string}) {
     setMessage('')
   }
   return (
-    <div className='w-full border border-gray-300 h-full relative rounded-md overflow-hidden shadow-md'>
+    <div className='w-full border border-gray-300 bg-white h-full relative rounded-md overflow-hidden shadow-md'>
       <div className='px-2 py-2 h-screen overflow-y-scroll pb-56'>
         {
           chats.map((chat) => (
