@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Left & Right Chat
 
-First, run the development server:
+This project is a simple chat application where two chat windows (left and right) can send and receive messages in real-time using WebSockets. When one user sends a message, the other window flashes to indicate a new message. All messages are stored persistently, so even when you close and reopen the tab, old messages are still available.
 
+
+
+
+
+## Features
+
+- Two chat windows (left and right)
+- Real-time message sending and receiving
+- Flashing effect on the receiving window when a new message is sent
+- Message persistence even after closing and reopening the tab
+
+
+## Steps to Run the Project Locally
+
+Follow these steps to clone and run the project on your local machine:
+
+- Clone the repository
+- Enter the project directory
+- Install all dependency
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm install or yarn install
 ```
+- Run the client
+```bash
+  npm run dev or yarn dev
+```
+This will start the client on http://localhost:3000.
+- Run the server
+```bash
+  npm run server or yarn server
+```
+This will start the server on http://localhost:8080.
+- Open the client in the browser
+Once both the client and server are running, open the browser and navigate to http://localhost:3000 to start using the chat application.
+## Message Persistence
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Messages are stored in localstorage for simplicity.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Libraries Used
 
-## Learn More
+- Next.js for the client-side (UI) framework
+- Node.js for the backend server
+- WebSocket for real-time communication
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
